@@ -38,7 +38,6 @@ class TestApiTokenResponse(unittest.TestCase):
                 api_token = fenrir_api.models.api_token.ApiToken(
                     application_uuid = 'e1bbf5bd471c484fa2f7989f048dbbbc', 
                     created = '2024-01-22T19:28:42Z', 
-                    is_public = True, 
                     label = 'my-token', 
                     token_plaintext = 4f03ff9f9caf4e1388126436b0c841f4, 
                     updated = '2024-01-22T19:28:42Z', 

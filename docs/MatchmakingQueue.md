@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **application_uuid** | **str** | A uuid of the application this queue is for. | [optional] [readonly] 
-**configuration** | [**MatchmakingQueueConfiguration**](MatchmakingQueueConfiguration.md) |  | 
+**configuration** | [**MatchmakingQueueConfiguration**](MatchmakingQueueConfiguration.md) | An initial configuration of the matchmaking queue. | 
 **created** | **datetime** | Time when the matchmaking queue was created. | [optional] [readonly] 
 **name** | **str** | A name of the matchmaking queue. | 
 **updated** | **datetime** | Time when the matchmaking queue was last updated. | [optional] [readonly] 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**api_token** | [**ApiToken**](ApiToken.md) |  | [optional] 
+**api_token** | [**ApiToken**](ApiToken.md) | API token | [optional] 
 
 ## Example
 

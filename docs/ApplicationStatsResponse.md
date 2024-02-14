@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**stats** | [**ApplicationStats**](ApplicationStats.md) |  | [optional] 
+**stats** | [**ApplicationStats**](ApplicationStats.md) | Application stats. | [optional] 
 
 ## Example
 

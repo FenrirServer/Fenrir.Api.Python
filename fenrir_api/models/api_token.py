@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictStr
+from pydantic import BaseModel, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from typing import Optional, Set
@@ -30,12 +30,11 @@ class ApiToken(BaseModel):
     """ # noqa: E501
     application_uuid: Optional[StrictStr] = Field(default=None, description="A uuid of the application this token is limited to.")
     created: Optional[datetime] = Field(default=None, description="Time when the token was created.")
-    is_public: Optional[StrictBool] = Field(default=None, description="A boolean value indicating if this token is a private or a public token.")
     label: Optional[Annotated[str, Field(min_length=4, strict=True, max_length=128)]] = Field(default=None, description="A label for the token.")
     token_plaintext: Optional[Any] = Field(default=None, description="A plain text value of the token. Only returned when the token is created.")
     updated: Optional[datetime] = Field(default=None, description="Time when the token was last updated.")
     uuid: Optional[StrictStr] = Field(default=None, description="A unique id of the api token.")
-    __properties: ClassVar[List[str]] = ["application_uuid", "created", "is_public", "label", "token_plaintext", "updated", "uuid"]
+    __properties: ClassVar[List[str]] = ["application_uuid", "created", "label", "token_plaintext", "updated", "uuid"]
 
     model_config = {
         "populate_by_name": True,
@@ -92,7 +91,7 @@ class ApiToken(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Optional[Dict]) -> Optional[Self]:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of ApiToken from a dict"""
         if obj is None:
             return None
@@ -103,7 +102,6 @@ class ApiToken(BaseModel):
         _obj = cls.model_validate({
             "application_uuid": obj.get("application_uuid"),
             "created": obj.get("created"),
-            "is_public": obj.get("is_public"),
             "label": obj.get("label"),
             "token_plaintext": obj.get("token_plaintext"),
             "updated": obj.get("updated"),

@@ -37,7 +37,7 @@ class PortConfiguration(BaseModel):
         if value is None:
             return value
 
-        if value not in ('tcp', 'udp', ''):
+        if value not in set(['tcp', 'udp', '']):
             raise ValueError("must be one of enum values ('tcp', 'udp', '')")
         return value
 
@@ -83,7 +83,7 @@ class PortConfiguration(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Optional[Dict]) -> Optional[Self]:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of PortConfiguration from a dict"""
         if obj is None:
             return None

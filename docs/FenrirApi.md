@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_matchmaking_queue_configuration**
-> MatchmakingQueueConfigurationResponse create_matchmaking_queue_configuration(queue_uuid, application_uuid, matchmaking_queue_configuration)
+> MatchmakingQueueConfigurationResponse create_matchmaking_queue_configuration(application_uuid, queue_uuid, matchmaking_queue_configuration)
 
 
 
@@ -481,12 +481,12 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    queue_uuid = 'queue_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    queue_uuid = 'queue_uuid_example' # str | 
     matchmaking_queue_configuration = fenrir_api.MatchmakingQueueConfiguration() # MatchmakingQueueConfiguration | 
 
     try:
-        api_response = api_instance.create_matchmaking_queue_configuration(queue_uuid, application_uuid, matchmaking_queue_configuration)
+        api_response = api_instance.create_matchmaking_queue_configuration(application_uuid, queue_uuid, matchmaking_queue_configuration)
         print("The response of FenrirApi->create_matchmaking_queue_configuration:\n")
         pprint(api_response)
     except Exception as e:
@@ -500,8 +500,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **queue_uuid** | **str**|  | 
  **matchmaking_queue_configuration** | [**MatchmakingQueueConfiguration**](MatchmakingQueueConfiguration.md)|  | 
 
 ### Return type
@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_deployment**
-> Response delete_deployment(deployment_uuid, application_uuid)
+> Response delete_deployment(application_uuid, deployment_uuid)
 
 
 
@@ -720,11 +720,11 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    deployment_uuid = 'deployment_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    deployment_uuid = 'deployment_uuid_example' # str | 
 
     try:
-        api_response = api_instance.delete_deployment(deployment_uuid, application_uuid)
+        api_response = api_instance.delete_deployment(application_uuid, deployment_uuid)
         print("The response of FenrirApi->delete_deployment:\n")
         pprint(api_response)
     except Exception as e:
@@ -738,8 +738,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deployment_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **deployment_uuid** | **str**|  | 
 
 ### Return type
 
@@ -764,7 +764,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_matchmaking_queue**
-> Response delete_matchmaking_queue(queue_uuid, application_uuid)
+> Response delete_matchmaking_queue(application_uuid, queue_uuid)
 
 
 
@@ -800,11 +800,11 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    queue_uuid = 'queue_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    queue_uuid = 'queue_uuid_example' # str | 
 
     try:
-        api_response = api_instance.delete_matchmaking_queue(queue_uuid, application_uuid)
+        api_response = api_instance.delete_matchmaking_queue(application_uuid, queue_uuid)
         print("The response of FenrirApi->delete_matchmaking_queue:\n")
         pprint(api_response)
     except Exception as e:
@@ -818,8 +818,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **queue_uuid** | **str**|  | 
 
 ### Return type
 
@@ -1073,7 +1073,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_application_configuration**
-> ApplicationConfigurationResponse get_application_configuration(configuration_uuid, application_uuid)
+> ApplicationConfigurationResponse get_application_configuration(application_uuid, configuration_uuid)
 
 
 
@@ -1109,11 +1109,11 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    configuration_uuid = 'configuration_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    configuration_uuid = 'configuration_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_application_configuration(configuration_uuid, application_uuid)
+        api_response = api_instance.get_application_configuration(application_uuid, configuration_uuid)
         print("The response of FenrirApi->get_application_configuration:\n")
         pprint(api_response)
     except Exception as e:
@@ -1127,8 +1127,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **configuration_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **configuration_uuid** | **str**|  | 
 
 ### Return type
 
@@ -1462,7 +1462,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_current_matchmaking_queue_configuration**
-> MatchmakingQueueConfigurationResponse get_current_matchmaking_queue_configuration(queue_uuid, application_uuid)
+> MatchmakingQueueConfigurationResponse get_current_matchmaking_queue_configuration(application_uuid, queue_uuid)
 
 
 
@@ -1498,11 +1498,11 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    queue_uuid = 'queue_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    queue_uuid = 'queue_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_current_matchmaking_queue_configuration(queue_uuid, application_uuid)
+        api_response = api_instance.get_current_matchmaking_queue_configuration(application_uuid, queue_uuid)
         print("The response of FenrirApi->get_current_matchmaking_queue_configuration:\n")
         pprint(api_response)
     except Exception as e:
@@ -1516,8 +1516,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **queue_uuid** | **str**|  | 
 
 ### Return type
 
@@ -1542,7 +1542,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_deployment**
-> DeploymentResponse get_deployment(deployment_uuid, application_uuid)
+> DeploymentResponse get_deployment(application_uuid, deployment_uuid)
 
 
 
@@ -1578,11 +1578,11 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    deployment_uuid = 'deployment_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    deployment_uuid = 'deployment_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_deployment(deployment_uuid, application_uuid)
+        api_response = api_instance.get_deployment(application_uuid, deployment_uuid)
         print("The response of FenrirApi->get_deployment:\n")
         pprint(api_response)
     except Exception as e:
@@ -1596,8 +1596,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deployment_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **deployment_uuid** | **str**|  | 
 
 ### Return type
 
@@ -1622,7 +1622,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_deployment_stats**
-> DeploymentStatsResponse get_deployment_stats(deployment_uuid, application_uuid, filter=filter)
+> DeploymentStatsResponse get_deployment_stats(application_uuid, deployment_uuid, filter=filter)
 
 
 
@@ -1658,12 +1658,12 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    deployment_uuid = 'deployment_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    deployment_uuid = 'deployment_uuid_example' # str | 
     filter = ['filter_example'] # List[str] |  (optional)
 
     try:
-        api_response = api_instance.get_deployment_stats(deployment_uuid, application_uuid, filter=filter)
+        api_response = api_instance.get_deployment_stats(application_uuid, deployment_uuid, filter=filter)
         print("The response of FenrirApi->get_deployment_stats:\n")
         pprint(api_response)
     except Exception as e:
@@ -1677,8 +1677,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deployment_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **deployment_uuid** | **str**|  | 
  **filter** | [**List[str]**](str.md)|  | [optional] 
 
 ### Return type
@@ -1860,7 +1860,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instance**
-> ApplicationInstanceResponse get_instance(deployment_uuid, instance_uuid, application_uuid)
+> ApplicationInstanceResponse get_instance(application_uuid, deployment_uuid, instance_uuid)
 
 
 
@@ -1896,12 +1896,12 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
+    application_uuid = 'application_uuid_example' # str | 
     deployment_uuid = 'deployment_uuid_example' # str | 
     instance_uuid = 'instance_uuid_example' # str | 
-    application_uuid = 'application_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_instance(deployment_uuid, instance_uuid, application_uuid)
+        api_response = api_instance.get_instance(application_uuid, deployment_uuid, instance_uuid)
         print("The response of FenrirApi->get_instance:\n")
         pprint(api_response)
     except Exception as e:
@@ -1915,9 +1915,9 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **application_uuid** | **str**|  | 
  **deployment_uuid** | **str**|  | 
  **instance_uuid** | **str**|  | 
- **application_uuid** | **str**|  | 
 
 ### Return type
 
@@ -1942,7 +1942,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instance_logs**
-> InstanceLogs get_instance_logs(deployment_uuid, instance_uuid, application_uuid)
+> InstanceLogs get_instance_logs(application_uuid, deployment_uuid, instance_uuid)
 
 
 
@@ -1978,12 +1978,12 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
+    application_uuid = 'application_uuid_example' # str | 
     deployment_uuid = 'deployment_uuid_example' # str | 
     instance_uuid = 'instance_uuid_example' # str | 
-    application_uuid = 'application_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_instance_logs(deployment_uuid, instance_uuid, application_uuid)
+        api_response = api_instance.get_instance_logs(application_uuid, deployment_uuid, instance_uuid)
         print("The response of FenrirApi->get_instance_logs:\n")
         pprint(api_response)
     except Exception as e:
@@ -1997,9 +1997,9 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **application_uuid** | **str**|  | 
  **deployment_uuid** | **str**|  | 
  **instance_uuid** | **str**|  | 
- **application_uuid** | **str**|  | 
 
 ### Return type
 
@@ -2024,7 +2024,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instance_logs_preview**
-> InstanceLogsPreview get_instance_logs_preview(deployment_uuid, instance_uuid, application_uuid)
+> InstanceLogsPreview get_instance_logs_preview(application_uuid, deployment_uuid, instance_uuid)
 
 
 
@@ -2060,12 +2060,12 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
+    application_uuid = 'application_uuid_example' # str | 
     deployment_uuid = 'deployment_uuid_example' # str | 
     instance_uuid = 'instance_uuid_example' # str | 
-    application_uuid = 'application_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_instance_logs_preview(deployment_uuid, instance_uuid, application_uuid)
+        api_response = api_instance.get_instance_logs_preview(application_uuid, deployment_uuid, instance_uuid)
         print("The response of FenrirApi->get_instance_logs_preview:\n")
         pprint(api_response)
     except Exception as e:
@@ -2079,9 +2079,9 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **application_uuid** | **str**|  | 
  **deployment_uuid** | **str**|  | 
  **instance_uuid** | **str**|  | 
- **application_uuid** | **str**|  | 
 
 ### Return type
 
@@ -2106,7 +2106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instances**
-> ApplicationInstanceListResponse get_instances(deployment_uuid, application_uuid)
+> ApplicationInstanceListResponse get_instances(application_uuid, deployment_uuid)
 
 
 
@@ -2142,11 +2142,11 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    deployment_uuid = 'deployment_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    deployment_uuid = 'deployment_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_instances(deployment_uuid, application_uuid)
+        api_response = api_instance.get_instances(application_uuid, deployment_uuid)
         print("The response of FenrirApi->get_instances:\n")
         pprint(api_response)
     except Exception as e:
@@ -2160,8 +2160,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deployment_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **deployment_uuid** | **str**|  | 
 
 ### Return type
 
@@ -2186,7 +2186,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_matchmaking_queue**
-> MatchmakingQueueResponse get_matchmaking_queue(queue_uuid, application_uuid)
+> MatchmakingQueueResponse get_matchmaking_queue(application_uuid, queue_uuid)
 
 
 
@@ -2222,11 +2222,11 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    queue_uuid = 'queue_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    queue_uuid = 'queue_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_matchmaking_queue(queue_uuid, application_uuid)
+        api_response = api_instance.get_matchmaking_queue(application_uuid, queue_uuid)
         print("The response of FenrirApi->get_matchmaking_queue:\n")
         pprint(api_response)
     except Exception as e:
@@ -2240,8 +2240,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **queue_uuid** | **str**|  | 
 
 ### Return type
 
@@ -2266,7 +2266,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_matchmaking_queue_configuration**
-> MatchmakingQueueConfigurationResponse get_matchmaking_queue_configuration(configuration_uuid, queue_uuid, application_uuid)
+> MatchmakingQueueConfigurationResponse get_matchmaking_queue_configuration(application_uuid, queue_uuid, configuration_uuid)
 
 
 
@@ -2302,12 +2302,12 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    configuration_uuid = 'configuration_uuid_example' # str | 
-    queue_uuid = 'queue_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    queue_uuid = 'queue_uuid_example' # str | 
+    configuration_uuid = 'configuration_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_matchmaking_queue_configuration(configuration_uuid, queue_uuid, application_uuid)
+        api_response = api_instance.get_matchmaking_queue_configuration(application_uuid, queue_uuid, configuration_uuid)
         print("The response of FenrirApi->get_matchmaking_queue_configuration:\n")
         pprint(api_response)
     except Exception as e:
@@ -2321,9 +2321,9 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **configuration_uuid** | **str**|  | 
- **queue_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **queue_uuid** | **str**|  | 
+ **configuration_uuid** | **str**|  | 
 
 ### Return type
 
@@ -2348,7 +2348,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_matchmaking_queue_configurations**
-> MatchmakingQueueConfigurationListResponse get_matchmaking_queue_configurations(queue_uuid, application_uuid)
+> MatchmakingQueueConfigurationListResponse get_matchmaking_queue_configurations(application_uuid, queue_uuid)
 
 
 
@@ -2384,11 +2384,11 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    queue_uuid = 'queue_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    queue_uuid = 'queue_uuid_example' # str | 
 
     try:
-        api_response = api_instance.get_matchmaking_queue_configurations(queue_uuid, application_uuid)
+        api_response = api_instance.get_matchmaking_queue_configurations(application_uuid, queue_uuid)
         print("The response of FenrirApi->get_matchmaking_queue_configurations:\n")
         pprint(api_response)
     except Exception as e:
@@ -2402,8 +2402,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **queue_uuid** | **str**|  | 
 
 ### Return type
 
@@ -2588,7 +2588,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_matchmaking_queue**
-> MatchmakingQueueResponse update_matchmaking_queue(queue_uuid, application_uuid, matchmaking_queue)
+> MatchmakingQueueResponse update_matchmaking_queue(application_uuid, queue_uuid, matchmaking_queue)
 
 
 
@@ -2625,12 +2625,12 @@ configuration = fenrir_api.Configuration(
 with fenrir_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = fenrir_api.FenrirApi(api_client)
-    queue_uuid = 'queue_uuid_example' # str | 
     application_uuid = 'application_uuid_example' # str | 
+    queue_uuid = 'queue_uuid_example' # str | 
     matchmaking_queue = fenrir_api.MatchmakingQueue() # MatchmakingQueue | 
 
     try:
-        api_response = api_instance.update_matchmaking_queue(queue_uuid, application_uuid, matchmaking_queue)
+        api_response = api_instance.update_matchmaking_queue(application_uuid, queue_uuid, matchmaking_queue)
         print("The response of FenrirApi->update_matchmaking_queue:\n")
         pprint(api_response)
     except Exception as e:
@@ -2644,8 +2644,8 @@ with fenrir_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_uuid** | **str**|  | 
  **application_uuid** | **str**|  | 
+ **queue_uuid** | **str**|  | 
  **matchmaking_queue** | [**MatchmakingQueue**](MatchmakingQueue.md)|  | 
 
 ### Return type

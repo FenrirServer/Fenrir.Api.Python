@@ -29,7 +29,7 @@ class Application(BaseModel):
     """
     Application
     """ # noqa: E501
-    configuration: ApplicationConfiguration
+    configuration: ApplicationConfiguration = Field(description="Initial configuration of the application.")
     created: Optional[datetime] = Field(default=None, description="Time when the application was created.")
     name: Annotated[str, Field(min_length=1, strict=True, max_length=128)] = Field(description="A unique name of the application.")
     updated: Optional[datetime] = Field(default=None, description="Time when the application was last updated.")
@@ -94,7 +94,7 @@ class Application(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Optional[Dict]) -> Optional[Self]:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of Application from a dict"""
         if obj is None:
             return None

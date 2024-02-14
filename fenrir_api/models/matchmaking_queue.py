@@ -30,7 +30,7 @@ class MatchmakingQueue(BaseModel):
     MatchmakingQueue
     """ # noqa: E501
     application_uuid: Optional[StrictStr] = Field(default=None, description="A uuid of the application this queue is for.")
-    configuration: MatchmakingQueueConfiguration
+    configuration: MatchmakingQueueConfiguration = Field(description="An initial configuration of the matchmaking queue.")
     created: Optional[datetime] = Field(default=None, description="Time when the matchmaking queue was created.")
     name: Annotated[str, Field(min_length=1, strict=True, max_length=128)] = Field(description="A name of the matchmaking queue.")
     updated: Optional[datetime] = Field(default=None, description="Time when the matchmaking queue was last updated.")
@@ -97,7 +97,7 @@ class MatchmakingQueue(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Optional[Dict]) -> Optional[Self]:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of MatchmakingQueue from a dict"""
         if obj is None:
             return None

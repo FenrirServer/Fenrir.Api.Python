@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deployment** | [**Deployment**](Deployment.md) |  | [optional] 
+**deployment** | [**Deployment**](Deployment.md) | An application deployment. | [optional] 
 
 ## Example
 

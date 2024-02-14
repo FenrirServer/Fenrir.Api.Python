@@ -46,7 +46,7 @@ class MatchmakingQueueConfiguration(BaseModel):
     @field_validator('version')
     def version_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('1.0'):
+        if value not in set(['1.0']):
             raise ValueError("must be one of enum values ('1.0')")
         return value
 
@@ -129,7 +129,7 @@ class MatchmakingQueueConfiguration(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Optional[Dict]) -> Optional[Self]:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of MatchmakingQueueConfiguration from a dict"""
         if obj is None:
             return None

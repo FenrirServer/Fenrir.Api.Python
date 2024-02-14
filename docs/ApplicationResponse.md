@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**application** | [**Application**](Application.md) |  | [optional] 
+**application** | [**Application**](Application.md) | An application. | [optional] 
 
 ## Example
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configuration** | [**ApplicationConfiguration**](ApplicationConfiguration.md) |  | [optional] 
+**configuration** | [**ApplicationConfiguration**](ApplicationConfiguration.md) | An application configuration. | [optional] 
 
 ## Example
 

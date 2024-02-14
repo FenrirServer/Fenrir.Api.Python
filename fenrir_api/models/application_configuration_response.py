@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fenrir_api.models.application_configuration import ApplicationConfiguration
 from typing import Optional, Set
@@ -27,7 +27,7 @@ class ApplicationConfigurationResponse(BaseModel):
     """
     ApplicationConfigurationResponse
     """ # noqa: E501
-    configuration: Optional[ApplicationConfiguration] = None
+    configuration: Optional[ApplicationConfiguration] = Field(default=None, description="An application configuration.")
     __properties: ClassVar[List[str]] = ["configuration"]
 
     model_config = {
@@ -75,7 +75,7 @@ class ApplicationConfigurationResponse(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Optional[Dict]) -> Optional[Self]:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of ApplicationConfigurationResponse from a dict"""
         if obj is None:
             return None

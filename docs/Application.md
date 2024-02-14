@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configuration** | [**ApplicationConfiguration**](ApplicationConfiguration.md) |  | 
+**configuration** | [**ApplicationConfiguration**](ApplicationConfiguration.md) | Initial configuration of the application. | 
 **created** | **datetime** | Time when the application was created. | [optional] [readonly] 
 **name** | **str** | A unique name of the application. | 
 **updated** | **datetime** | Time when the application was last updated. | [optional] [readonly] 

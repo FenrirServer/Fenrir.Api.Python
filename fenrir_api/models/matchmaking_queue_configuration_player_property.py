@@ -43,7 +43,7 @@ class MatchmakingQueueConfigurationPlayerProperty(BaseModel):
     @field_validator('type')
     def type_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('int', 'string', 'bool', 'float'):
+        if value not in set(['int', 'string', 'bool', 'float']):
             raise ValueError("must be one of enum values ('int', 'string', 'bool', 'float')")
         return value
 
@@ -94,7 +94,7 @@ class MatchmakingQueueConfigurationPlayerProperty(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Optional[Dict]) -> Optional[Self]:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of MatchmakingQueueConfigurationPlayerProperty from a dict"""
         if obj is None:
             return None

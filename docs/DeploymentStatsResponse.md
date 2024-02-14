@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**stats** | [**DeploymentStats**](DeploymentStats.md) |  | [optional] 
+**stats** | [**DeploymentStats**](DeploymentStats.md) | Deployment stats. | [optional] 
 
 ## Example
 

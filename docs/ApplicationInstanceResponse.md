@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**instance** | [**ApplicationInstance**](ApplicationInstance.md) |  | [optional] 
+**instance** | [**ApplicationInstance**](ApplicationInstance.md) | An application instance. | [optional] 
 
 ## Example
 

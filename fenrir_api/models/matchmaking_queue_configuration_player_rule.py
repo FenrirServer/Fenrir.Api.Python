@@ -42,7 +42,7 @@ class MatchmakingQueueConfigurationPlayerRule(BaseModel):
     @field_validator('type')
     def type_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('value_equality', 'max_difference_between_values'):
+        if value not in set(['value_equality', 'max_difference_between_values']):
             raise ValueError("must be one of enum values ('value_equality', 'max_difference_between_values')")
         return value
 
@@ -93,7 +93,7 @@ class MatchmakingQueueConfigurationPlayerRule(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Optional[Dict]) -> Optional[Self]:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of MatchmakingQueueConfigurationPlayerRule from a dict"""
         if obj is None:
             return None

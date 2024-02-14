@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**queue** | [**MatchmakingQueue**](MatchmakingQueue.md) |  | [optional] 
+**queue** | [**MatchmakingQueue**](MatchmakingQueue.md) | A matchmaking queue. | [optional] 
 
 ## Example
 

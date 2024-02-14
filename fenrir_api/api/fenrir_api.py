@@ -45,7 +45,7 @@ from fenrir_api.models.matchmaking_queue_list_response import MatchmakingQueueLi
 from fenrir_api.models.matchmaking_queue_response import MatchmakingQueueResponse
 from fenrir_api.models.response import Response
 
-from fenrir_api.api_client import ApiClient
+from fenrir_api.api_client import ApiClient, RequestSerialized
 from fenrir_api.api_response import ApiResponse
 from fenrir_api.rest import RESTResponseType
 
@@ -270,7 +270,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -544,7 +544,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -834,7 +834,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1126,7 +1126,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1418,7 +1418,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1490,8 +1490,8 @@ class FenrirApi:
     @validate_call
     def create_matchmaking_queue_configuration(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         matchmaking_queue_configuration: MatchmakingQueueConfiguration,
         _request_timeout: Union[
             None,
@@ -1510,10 +1510,10 @@ class FenrirApi:
 
         Creates a new matchmaking queue configuration.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param matchmaking_queue_configuration: (required)
         :type matchmaking_queue_configuration: MatchmakingQueueConfiguration
         :param _request_timeout: timeout setting for this request. If one
@@ -1539,8 +1539,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._create_matchmaking_queue_configuration_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             matchmaking_queue_configuration=matchmaking_queue_configuration,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1567,8 +1567,8 @@ class FenrirApi:
     @validate_call
     def create_matchmaking_queue_configuration_with_http_info(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         matchmaking_queue_configuration: MatchmakingQueueConfiguration,
         _request_timeout: Union[
             None,
@@ -1587,10 +1587,10 @@ class FenrirApi:
 
         Creates a new matchmaking queue configuration.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param matchmaking_queue_configuration: (required)
         :type matchmaking_queue_configuration: MatchmakingQueueConfiguration
         :param _request_timeout: timeout setting for this request. If one
@@ -1616,8 +1616,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._create_matchmaking_queue_configuration_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             matchmaking_queue_configuration=matchmaking_queue_configuration,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1644,8 +1644,8 @@ class FenrirApi:
     @validate_call
     def create_matchmaking_queue_configuration_without_preload_content(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         matchmaking_queue_configuration: MatchmakingQueueConfiguration,
         _request_timeout: Union[
             None,
@@ -1664,10 +1664,10 @@ class FenrirApi:
 
         Creates a new matchmaking queue configuration.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param matchmaking_queue_configuration: (required)
         :type matchmaking_queue_configuration: MatchmakingQueueConfiguration
         :param _request_timeout: timeout setting for this request. If one
@@ -1693,8 +1693,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._create_matchmaking_queue_configuration_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             matchmaking_queue_configuration=matchmaking_queue_configuration,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -1716,14 +1716,14 @@ class FenrirApi:
 
     def _create_matchmaking_queue_configuration_serialize(
         self,
-        queue_uuid,
         application_uuid,
+        queue_uuid,
         matchmaking_queue_configuration,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1738,10 +1738,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if queue_uuid is not None:
-            _path_params['queue_uuid'] = queue_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if queue_uuid is not None:
+            _path_params['queue_uuid'] = queue_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -1998,7 +1998,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2262,7 +2262,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2319,8 +2319,8 @@ class FenrirApi:
     @validate_call
     def delete_deployment(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2338,10 +2338,10 @@ class FenrirApi:
 
         Deletes an application deployment.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2365,8 +2365,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._delete_deployment_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2391,8 +2391,8 @@ class FenrirApi:
     @validate_call
     def delete_deployment_with_http_info(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2410,10 +2410,10 @@ class FenrirApi:
 
         Deletes an application deployment.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2437,8 +2437,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._delete_deployment_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2463,8 +2463,8 @@ class FenrirApi:
     @validate_call
     def delete_deployment_without_preload_content(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2482,10 +2482,10 @@ class FenrirApi:
 
         Deletes an application deployment.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2509,8 +2509,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._delete_deployment_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2530,13 +2530,13 @@ class FenrirApi:
 
     def _delete_deployment_serialize(
         self,
-        deployment_uuid,
         application_uuid,
+        deployment_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2551,10 +2551,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if deployment_uuid is not None:
-            _path_params['deployment_uuid'] = deployment_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if deployment_uuid is not None:
+            _path_params['deployment_uuid'] = deployment_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -2595,8 +2595,8 @@ class FenrirApi:
     @validate_call
     def delete_matchmaking_queue(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2614,10 +2614,10 @@ class FenrirApi:
 
         Deletes a matchmaking queue.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2641,8 +2641,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._delete_matchmaking_queue_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2667,8 +2667,8 @@ class FenrirApi:
     @validate_call
     def delete_matchmaking_queue_with_http_info(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2686,10 +2686,10 @@ class FenrirApi:
 
         Deletes a matchmaking queue.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2713,8 +2713,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._delete_matchmaking_queue_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2739,8 +2739,8 @@ class FenrirApi:
     @validate_call
     def delete_matchmaking_queue_without_preload_content(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2758,10 +2758,10 @@ class FenrirApi:
 
         Deletes a matchmaking queue.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2785,8 +2785,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._delete_matchmaking_queue_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2806,13 +2806,13 @@ class FenrirApi:
 
     def _delete_matchmaking_queue_serialize(
         self,
-        queue_uuid,
         application_uuid,
+        queue_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2827,10 +2827,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if queue_uuid is not None:
-            _path_params['queue_uuid'] = queue_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if queue_uuid is not None:
+            _path_params['queue_uuid'] = queue_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -3075,7 +3075,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -3320,7 +3320,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -3579,7 +3579,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -3636,8 +3636,8 @@ class FenrirApi:
     @validate_call
     def get_application_configuration(
         self,
-        configuration_uuid: StrictStr,
         application_uuid: StrictStr,
+        configuration_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3655,10 +3655,10 @@ class FenrirApi:
 
         Retrieves an application configuration.
 
-        :param configuration_uuid: (required)
-        :type configuration_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param configuration_uuid: (required)
+        :type configuration_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3682,8 +3682,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_application_configuration_serialize(
-            configuration_uuid=configuration_uuid,
             application_uuid=application_uuid,
+            configuration_uuid=configuration_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3708,8 +3708,8 @@ class FenrirApi:
     @validate_call
     def get_application_configuration_with_http_info(
         self,
-        configuration_uuid: StrictStr,
         application_uuid: StrictStr,
+        configuration_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3727,10 +3727,10 @@ class FenrirApi:
 
         Retrieves an application configuration.
 
-        :param configuration_uuid: (required)
-        :type configuration_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param configuration_uuid: (required)
+        :type configuration_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3754,8 +3754,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_application_configuration_serialize(
-            configuration_uuid=configuration_uuid,
             application_uuid=application_uuid,
+            configuration_uuid=configuration_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3780,8 +3780,8 @@ class FenrirApi:
     @validate_call
     def get_application_configuration_without_preload_content(
         self,
-        configuration_uuid: StrictStr,
         application_uuid: StrictStr,
+        configuration_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3799,10 +3799,10 @@ class FenrirApi:
 
         Retrieves an application configuration.
 
-        :param configuration_uuid: (required)
-        :type configuration_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param configuration_uuid: (required)
+        :type configuration_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -3826,8 +3826,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_application_configuration_serialize(
-            configuration_uuid=configuration_uuid,
             application_uuid=application_uuid,
+            configuration_uuid=configuration_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -3847,13 +3847,13 @@ class FenrirApi:
 
     def _get_application_configuration_serialize(
         self,
-        configuration_uuid,
         application_uuid,
+        configuration_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -3868,10 +3868,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if configuration_uuid is not None:
-            _path_params['configuration_uuid'] = configuration_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if configuration_uuid is not None:
+            _path_params['configuration_uuid'] = configuration_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -4116,7 +4116,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -4390,7 +4390,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -4640,7 +4640,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -4899,7 +4899,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -4956,8 +4956,8 @@ class FenrirApi:
     @validate_call
     def get_current_matchmaking_queue_configuration(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -4975,10 +4975,10 @@ class FenrirApi:
 
         Retrieves current matchmaking queue configuration.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5002,8 +5002,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_current_matchmaking_queue_configuration_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5028,8 +5028,8 @@ class FenrirApi:
     @validate_call
     def get_current_matchmaking_queue_configuration_with_http_info(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5047,10 +5047,10 @@ class FenrirApi:
 
         Retrieves current matchmaking queue configuration.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5074,8 +5074,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_current_matchmaking_queue_configuration_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5100,8 +5100,8 @@ class FenrirApi:
     @validate_call
     def get_current_matchmaking_queue_configuration_without_preload_content(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5119,10 +5119,10 @@ class FenrirApi:
 
         Retrieves current matchmaking queue configuration.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5146,8 +5146,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_current_matchmaking_queue_configuration_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5167,13 +5167,13 @@ class FenrirApi:
 
     def _get_current_matchmaking_queue_configuration_serialize(
         self,
-        queue_uuid,
         application_uuid,
+        queue_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -5188,10 +5188,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if queue_uuid is not None:
-            _path_params['queue_uuid'] = queue_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if queue_uuid is not None:
+            _path_params['queue_uuid'] = queue_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -5232,8 +5232,8 @@ class FenrirApi:
     @validate_call
     def get_deployment(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5251,10 +5251,10 @@ class FenrirApi:
 
         Retrieves an application deployment.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5278,8 +5278,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_deployment_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5304,8 +5304,8 @@ class FenrirApi:
     @validate_call
     def get_deployment_with_http_info(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5323,10 +5323,10 @@ class FenrirApi:
 
         Retrieves an application deployment.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5350,8 +5350,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_deployment_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5376,8 +5376,8 @@ class FenrirApi:
     @validate_call
     def get_deployment_without_preload_content(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -5395,10 +5395,10 @@ class FenrirApi:
 
         Retrieves an application deployment.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5422,8 +5422,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_deployment_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5443,13 +5443,13 @@ class FenrirApi:
 
     def _get_deployment_serialize(
         self,
-        deployment_uuid,
         application_uuid,
+        deployment_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -5464,10 +5464,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if deployment_uuid is not None:
-            _path_params['deployment_uuid'] = deployment_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if deployment_uuid is not None:
+            _path_params['deployment_uuid'] = deployment_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -5508,8 +5508,8 @@ class FenrirApi:
     @validate_call
     def get_deployment_stats(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         filter: Optional[List[StrictStr]] = None,
         _request_timeout: Union[
             None,
@@ -5528,10 +5528,10 @@ class FenrirApi:
 
         Retrieves deployment stats.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param filter:
         :type filter: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -5557,8 +5557,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_deployment_stats_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             filter=filter,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5584,8 +5584,8 @@ class FenrirApi:
     @validate_call
     def get_deployment_stats_with_http_info(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         filter: Optional[List[StrictStr]] = None,
         _request_timeout: Union[
             None,
@@ -5604,10 +5604,10 @@ class FenrirApi:
 
         Retrieves deployment stats.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param filter:
         :type filter: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -5633,8 +5633,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_deployment_stats_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             filter=filter,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5660,8 +5660,8 @@ class FenrirApi:
     @validate_call
     def get_deployment_stats_without_preload_content(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         filter: Optional[List[StrictStr]] = None,
         _request_timeout: Union[
             None,
@@ -5680,10 +5680,10 @@ class FenrirApi:
 
         Retrieves deployment stats.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param filter:
         :type filter: List[str]
         :param _request_timeout: timeout setting for this request. If one
@@ -5709,8 +5709,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_deployment_stats_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             filter=filter,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -5731,14 +5731,14 @@ class FenrirApi:
 
     def _get_deployment_stats_serialize(
         self,
-        deployment_uuid,
         application_uuid,
+        deployment_uuid,
         filter,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -5754,10 +5754,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if deployment_uuid is not None:
-            _path_params['deployment_uuid'] = deployment_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if deployment_uuid is not None:
+            _path_params['deployment_uuid'] = deployment_uuid
         # process the query parameters
         if filter is not None:
             
@@ -6006,7 +6006,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -6267,7 +6267,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -6324,9 +6324,9 @@ class FenrirApi:
     @validate_call
     def get_instance(
         self,
+        application_uuid: StrictStr,
         deployment_uuid: StrictStr,
         instance_uuid: StrictStr,
-        application_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6344,12 +6344,12 @@ class FenrirApi:
 
         Retrieves an application instance.
 
+        :param application_uuid: (required)
+        :type application_uuid: str
         :param deployment_uuid: (required)
         :type deployment_uuid: str
         :param instance_uuid: (required)
         :type instance_uuid: str
-        :param application_uuid: (required)
-        :type application_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6373,9 +6373,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instance_serialize(
+            application_uuid=application_uuid,
             deployment_uuid=deployment_uuid,
             instance_uuid=instance_uuid,
-            application_uuid=application_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6400,9 +6400,9 @@ class FenrirApi:
     @validate_call
     def get_instance_with_http_info(
         self,
+        application_uuid: StrictStr,
         deployment_uuid: StrictStr,
         instance_uuid: StrictStr,
-        application_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6420,12 +6420,12 @@ class FenrirApi:
 
         Retrieves an application instance.
 
+        :param application_uuid: (required)
+        :type application_uuid: str
         :param deployment_uuid: (required)
         :type deployment_uuid: str
         :param instance_uuid: (required)
         :type instance_uuid: str
-        :param application_uuid: (required)
-        :type application_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6449,9 +6449,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instance_serialize(
+            application_uuid=application_uuid,
             deployment_uuid=deployment_uuid,
             instance_uuid=instance_uuid,
-            application_uuid=application_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6476,9 +6476,9 @@ class FenrirApi:
     @validate_call
     def get_instance_without_preload_content(
         self,
+        application_uuid: StrictStr,
         deployment_uuid: StrictStr,
         instance_uuid: StrictStr,
-        application_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6496,12 +6496,12 @@ class FenrirApi:
 
         Retrieves an application instance.
 
+        :param application_uuid: (required)
+        :type application_uuid: str
         :param deployment_uuid: (required)
         :type deployment_uuid: str
         :param instance_uuid: (required)
         :type instance_uuid: str
-        :param application_uuid: (required)
-        :type application_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6525,9 +6525,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instance_serialize(
+            application_uuid=application_uuid,
             deployment_uuid=deployment_uuid,
             instance_uuid=instance_uuid,
-            application_uuid=application_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6547,14 +6547,14 @@ class FenrirApi:
 
     def _get_instance_serialize(
         self,
+        application_uuid,
         deployment_uuid,
         instance_uuid,
-        application_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -6569,12 +6569,12 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
+        if application_uuid is not None:
+            _path_params['application_uuid'] = application_uuid
         if deployment_uuid is not None:
             _path_params['deployment_uuid'] = deployment_uuid
         if instance_uuid is not None:
             _path_params['instance_uuid'] = instance_uuid
-        if application_uuid is not None:
-            _path_params['application_uuid'] = application_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -6615,9 +6615,9 @@ class FenrirApi:
     @validate_call
     def get_instance_logs(
         self,
+        application_uuid: StrictStr,
         deployment_uuid: StrictStr,
         instance_uuid: StrictStr,
-        application_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6635,12 +6635,12 @@ class FenrirApi:
 
         Retrieves application instance logs.
 
+        :param application_uuid: (required)
+        :type application_uuid: str
         :param deployment_uuid: (required)
         :type deployment_uuid: str
         :param instance_uuid: (required)
         :type instance_uuid: str
-        :param application_uuid: (required)
-        :type application_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6664,9 +6664,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instance_logs_serialize(
+            application_uuid=application_uuid,
             deployment_uuid=deployment_uuid,
             instance_uuid=instance_uuid,
-            application_uuid=application_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6691,9 +6691,9 @@ class FenrirApi:
     @validate_call
     def get_instance_logs_with_http_info(
         self,
+        application_uuid: StrictStr,
         deployment_uuid: StrictStr,
         instance_uuid: StrictStr,
-        application_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6711,12 +6711,12 @@ class FenrirApi:
 
         Retrieves application instance logs.
 
+        :param application_uuid: (required)
+        :type application_uuid: str
         :param deployment_uuid: (required)
         :type deployment_uuid: str
         :param instance_uuid: (required)
         :type instance_uuid: str
-        :param application_uuid: (required)
-        :type application_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6740,9 +6740,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instance_logs_serialize(
+            application_uuid=application_uuid,
             deployment_uuid=deployment_uuid,
             instance_uuid=instance_uuid,
-            application_uuid=application_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6767,9 +6767,9 @@ class FenrirApi:
     @validate_call
     def get_instance_logs_without_preload_content(
         self,
+        application_uuid: StrictStr,
         deployment_uuid: StrictStr,
         instance_uuid: StrictStr,
-        application_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6787,12 +6787,12 @@ class FenrirApi:
 
         Retrieves application instance logs.
 
+        :param application_uuid: (required)
+        :type application_uuid: str
         :param deployment_uuid: (required)
         :type deployment_uuid: str
         :param instance_uuid: (required)
         :type instance_uuid: str
-        :param application_uuid: (required)
-        :type application_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6816,9 +6816,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instance_logs_serialize(
+            application_uuid=application_uuid,
             deployment_uuid=deployment_uuid,
             instance_uuid=instance_uuid,
-            application_uuid=application_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6838,14 +6838,14 @@ class FenrirApi:
 
     def _get_instance_logs_serialize(
         self,
+        application_uuid,
         deployment_uuid,
         instance_uuid,
-        application_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -6860,12 +6860,12 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
+        if application_uuid is not None:
+            _path_params['application_uuid'] = application_uuid
         if deployment_uuid is not None:
             _path_params['deployment_uuid'] = deployment_uuid
         if instance_uuid is not None:
             _path_params['instance_uuid'] = instance_uuid
-        if application_uuid is not None:
-            _path_params['application_uuid'] = application_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -6906,9 +6906,9 @@ class FenrirApi:
     @validate_call
     def get_instance_logs_preview(
         self,
+        application_uuid: StrictStr,
         deployment_uuid: StrictStr,
         instance_uuid: StrictStr,
-        application_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6926,12 +6926,12 @@ class FenrirApi:
 
         Retrieves a small number of most recent application instance logs.
 
+        :param application_uuid: (required)
+        :type application_uuid: str
         :param deployment_uuid: (required)
         :type deployment_uuid: str
         :param instance_uuid: (required)
         :type instance_uuid: str
-        :param application_uuid: (required)
-        :type application_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6955,9 +6955,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instance_logs_preview_serialize(
+            application_uuid=application_uuid,
             deployment_uuid=deployment_uuid,
             instance_uuid=instance_uuid,
-            application_uuid=application_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6982,9 +6982,9 @@ class FenrirApi:
     @validate_call
     def get_instance_logs_preview_with_http_info(
         self,
+        application_uuid: StrictStr,
         deployment_uuid: StrictStr,
         instance_uuid: StrictStr,
-        application_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7002,12 +7002,12 @@ class FenrirApi:
 
         Retrieves a small number of most recent application instance logs.
 
+        :param application_uuid: (required)
+        :type application_uuid: str
         :param deployment_uuid: (required)
         :type deployment_uuid: str
         :param instance_uuid: (required)
         :type instance_uuid: str
-        :param application_uuid: (required)
-        :type application_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7031,9 +7031,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instance_logs_preview_serialize(
+            application_uuid=application_uuid,
             deployment_uuid=deployment_uuid,
             instance_uuid=instance_uuid,
-            application_uuid=application_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7058,9 +7058,9 @@ class FenrirApi:
     @validate_call
     def get_instance_logs_preview_without_preload_content(
         self,
+        application_uuid: StrictStr,
         deployment_uuid: StrictStr,
         instance_uuid: StrictStr,
-        application_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7078,12 +7078,12 @@ class FenrirApi:
 
         Retrieves a small number of most recent application instance logs.
 
+        :param application_uuid: (required)
+        :type application_uuid: str
         :param deployment_uuid: (required)
         :type deployment_uuid: str
         :param instance_uuid: (required)
         :type instance_uuid: str
-        :param application_uuid: (required)
-        :type application_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7107,9 +7107,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instance_logs_preview_serialize(
+            application_uuid=application_uuid,
             deployment_uuid=deployment_uuid,
             instance_uuid=instance_uuid,
-            application_uuid=application_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7129,14 +7129,14 @@ class FenrirApi:
 
     def _get_instance_logs_preview_serialize(
         self,
+        application_uuid,
         deployment_uuid,
         instance_uuid,
-        application_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -7151,12 +7151,12 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
+        if application_uuid is not None:
+            _path_params['application_uuid'] = application_uuid
         if deployment_uuid is not None:
             _path_params['deployment_uuid'] = deployment_uuid
         if instance_uuid is not None:
             _path_params['instance_uuid'] = instance_uuid
-        if application_uuid is not None:
-            _path_params['application_uuid'] = application_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -7197,8 +7197,8 @@ class FenrirApi:
     @validate_call
     def get_instances(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7216,10 +7216,10 @@ class FenrirApi:
 
         Lists all application instances for a given deployment.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7243,8 +7243,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instances_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7269,8 +7269,8 @@ class FenrirApi:
     @validate_call
     def get_instances_with_http_info(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7288,10 +7288,10 @@ class FenrirApi:
 
         Lists all application instances for a given deployment.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7315,8 +7315,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instances_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7341,8 +7341,8 @@ class FenrirApi:
     @validate_call
     def get_instances_without_preload_content(
         self,
-        deployment_uuid: StrictStr,
         application_uuid: StrictStr,
+        deployment_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7360,10 +7360,10 @@ class FenrirApi:
 
         Lists all application instances for a given deployment.
 
-        :param deployment_uuid: (required)
-        :type deployment_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param deployment_uuid: (required)
+        :type deployment_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7387,8 +7387,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_instances_serialize(
-            deployment_uuid=deployment_uuid,
             application_uuid=application_uuid,
+            deployment_uuid=deployment_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7408,13 +7408,13 @@ class FenrirApi:
 
     def _get_instances_serialize(
         self,
-        deployment_uuid,
         application_uuid,
+        deployment_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -7429,10 +7429,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if deployment_uuid is not None:
-            _path_params['deployment_uuid'] = deployment_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if deployment_uuid is not None:
+            _path_params['deployment_uuid'] = deployment_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -7473,8 +7473,8 @@ class FenrirApi:
     @validate_call
     def get_matchmaking_queue(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7492,10 +7492,10 @@ class FenrirApi:
 
         Retrieves a matchmaking queue.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7519,8 +7519,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_matchmaking_queue_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7545,8 +7545,8 @@ class FenrirApi:
     @validate_call
     def get_matchmaking_queue_with_http_info(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7564,10 +7564,10 @@ class FenrirApi:
 
         Retrieves a matchmaking queue.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7591,8 +7591,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_matchmaking_queue_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7617,8 +7617,8 @@ class FenrirApi:
     @validate_call
     def get_matchmaking_queue_without_preload_content(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7636,10 +7636,10 @@ class FenrirApi:
 
         Retrieves a matchmaking queue.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7663,8 +7663,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_matchmaking_queue_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7684,13 +7684,13 @@ class FenrirApi:
 
     def _get_matchmaking_queue_serialize(
         self,
-        queue_uuid,
         application_uuid,
+        queue_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -7705,10 +7705,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if queue_uuid is not None:
-            _path_params['queue_uuid'] = queue_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if queue_uuid is not None:
+            _path_params['queue_uuid'] = queue_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -7749,9 +7749,9 @@ class FenrirApi:
     @validate_call
     def get_matchmaking_queue_configuration(
         self,
-        configuration_uuid: StrictStr,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
+        configuration_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7769,12 +7769,12 @@ class FenrirApi:
 
         Retrieves a matchmaking queue configuration.
 
-        :param configuration_uuid: (required)
-        :type configuration_uuid: str
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
+        :param configuration_uuid: (required)
+        :type configuration_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7798,9 +7798,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_matchmaking_queue_configuration_serialize(
-            configuration_uuid=configuration_uuid,
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
+            configuration_uuid=configuration_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7825,9 +7825,9 @@ class FenrirApi:
     @validate_call
     def get_matchmaking_queue_configuration_with_http_info(
         self,
-        configuration_uuid: StrictStr,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
+        configuration_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7845,12 +7845,12 @@ class FenrirApi:
 
         Retrieves a matchmaking queue configuration.
 
-        :param configuration_uuid: (required)
-        :type configuration_uuid: str
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
+        :param configuration_uuid: (required)
+        :type configuration_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7874,9 +7874,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_matchmaking_queue_configuration_serialize(
-            configuration_uuid=configuration_uuid,
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
+            configuration_uuid=configuration_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7901,9 +7901,9 @@ class FenrirApi:
     @validate_call
     def get_matchmaking_queue_configuration_without_preload_content(
         self,
-        configuration_uuid: StrictStr,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
+        configuration_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -7921,12 +7921,12 @@ class FenrirApi:
 
         Retrieves a matchmaking queue configuration.
 
-        :param configuration_uuid: (required)
-        :type configuration_uuid: str
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
+        :param configuration_uuid: (required)
+        :type configuration_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -7950,9 +7950,9 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_matchmaking_queue_configuration_serialize(
-            configuration_uuid=configuration_uuid,
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
+            configuration_uuid=configuration_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -7972,14 +7972,14 @@ class FenrirApi:
 
     def _get_matchmaking_queue_configuration_serialize(
         self,
-        configuration_uuid,
-        queue_uuid,
         application_uuid,
+        queue_uuid,
+        configuration_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -7994,12 +7994,12 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if configuration_uuid is not None:
-            _path_params['configuration_uuid'] = configuration_uuid
-        if queue_uuid is not None:
-            _path_params['queue_uuid'] = queue_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if queue_uuid is not None:
+            _path_params['queue_uuid'] = queue_uuid
+        if configuration_uuid is not None:
+            _path_params['configuration_uuid'] = configuration_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -8040,8 +8040,8 @@ class FenrirApi:
     @validate_call
     def get_matchmaking_queue_configurations(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -8059,10 +8059,10 @@ class FenrirApi:
 
         Lists matchmaking queue configurations.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -8086,8 +8086,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_matchmaking_queue_configurations_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -8112,8 +8112,8 @@ class FenrirApi:
     @validate_call
     def get_matchmaking_queue_configurations_with_http_info(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -8131,10 +8131,10 @@ class FenrirApi:
 
         Lists matchmaking queue configurations.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -8158,8 +8158,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_matchmaking_queue_configurations_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -8184,8 +8184,8 @@ class FenrirApi:
     @validate_call
     def get_matchmaking_queue_configurations_without_preload_content(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -8203,10 +8203,10 @@ class FenrirApi:
 
         Lists matchmaking queue configurations.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -8230,8 +8230,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._get_matchmaking_queue_configurations_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -8251,13 +8251,13 @@ class FenrirApi:
 
     def _get_matchmaking_queue_configurations_serialize(
         self,
-        queue_uuid,
         application_uuid,
+        queue_uuid,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -8272,10 +8272,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if queue_uuid is not None:
-            _path_params['queue_uuid'] = queue_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if queue_uuid is not None:
+            _path_params['queue_uuid'] = queue_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -8520,7 +8520,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -8797,7 +8797,7 @@ class FenrirApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -8869,8 +8869,8 @@ class FenrirApi:
     @validate_call
     def update_matchmaking_queue(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         matchmaking_queue: MatchmakingQueue,
         _request_timeout: Union[
             None,
@@ -8889,10 +8889,10 @@ class FenrirApi:
 
         Updates a matchmaking queue.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param matchmaking_queue: (required)
         :type matchmaking_queue: MatchmakingQueue
         :param _request_timeout: timeout setting for this request. If one
@@ -8918,8 +8918,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._update_matchmaking_queue_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             matchmaking_queue=matchmaking_queue,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -8946,8 +8946,8 @@ class FenrirApi:
     @validate_call
     def update_matchmaking_queue_with_http_info(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         matchmaking_queue: MatchmakingQueue,
         _request_timeout: Union[
             None,
@@ -8966,10 +8966,10 @@ class FenrirApi:
 
         Updates a matchmaking queue.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param matchmaking_queue: (required)
         :type matchmaking_queue: MatchmakingQueue
         :param _request_timeout: timeout setting for this request. If one
@@ -8995,8 +8995,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._update_matchmaking_queue_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             matchmaking_queue=matchmaking_queue,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -9023,8 +9023,8 @@ class FenrirApi:
     @validate_call
     def update_matchmaking_queue_without_preload_content(
         self,
-        queue_uuid: StrictStr,
         application_uuid: StrictStr,
+        queue_uuid: StrictStr,
         matchmaking_queue: MatchmakingQueue,
         _request_timeout: Union[
             None,
@@ -9043,10 +9043,10 @@ class FenrirApi:
 
         Updates a matchmaking queue.
 
-        :param queue_uuid: (required)
-        :type queue_uuid: str
         :param application_uuid: (required)
         :type application_uuid: str
+        :param queue_uuid: (required)
+        :type queue_uuid: str
         :param matchmaking_queue: (required)
         :type matchmaking_queue: MatchmakingQueue
         :param _request_timeout: timeout setting for this request. If one
@@ -9072,8 +9072,8 @@ class FenrirApi:
         """ # noqa: E501
 
         _param = self._update_matchmaking_queue_serialize(
-            queue_uuid=queue_uuid,
             application_uuid=application_uuid,
+            queue_uuid=queue_uuid,
             matchmaking_queue=matchmaking_queue,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -9095,14 +9095,14 @@ class FenrirApi:
 
     def _update_matchmaking_queue_serialize(
         self,
-        queue_uuid,
         application_uuid,
+        queue_uuid,
         matchmaking_queue,
         _request_auth,
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -9117,10 +9117,10 @@ class FenrirApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if queue_uuid is not None:
-            _path_params['queue_uuid'] = queue_uuid
         if application_uuid is not None:
             _path_params['application_uuid'] = application_uuid
+        if queue_uuid is not None:
+            _path_params['queue_uuid'] = queue_uuid
         # process the query parameters
         # process the header parameters
         # process the form parameters

@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **application_uuid** | **str** | A uuid of the application this token is limited to. | [optional] 
 **created** | **datetime** | Time when the token was created. | [optional] [readonly] 
-**is_public** | **bool** | A boolean value indicating if this token is a private or a public token. | [optional] 
 **label** | **str** | A label for the token. | [optional] 
 **token_plaintext** | **object** | A plain text value of the token. Only returned when the token is created. | [optional] [readonly] 
 **updated** | **datetime** | Time when the token was last updated. | [optional] [readonly] 

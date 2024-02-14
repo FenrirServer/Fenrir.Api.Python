@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from fenrir_api.models.deployment_stats import DeploymentStats
 from typing import Optional, Set
@@ -27,7 +27,7 @@ class DeploymentStatsResponse(BaseModel):
     """
     DeploymentStatsResponse
     """ # noqa: E501
-    stats: Optional[DeploymentStats] = None
+    stats: Optional[DeploymentStats] = Field(default=None, description="Deployment stats.")
     __properties: ClassVar[List[str]] = ["stats"]
 
     model_config = {
@@ -75,7 +75,7 @@ class DeploymentStatsResponse(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Optional[Dict]) -> Optional[Self]:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of DeploymentStatsResponse from a dict"""
         if obj is None:
             return None

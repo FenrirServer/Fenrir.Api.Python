@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configuration** | [**MatchmakingQueueConfiguration**](MatchmakingQueueConfiguration.md) |  | [optional] 
+**configuration** | [**MatchmakingQueueConfiguration**](MatchmakingQueueConfiguration.md) | A matchmaking queue configuration. | [optional] 
 
 ## Example
 
