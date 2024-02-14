@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.4"
 
 # import apis into sdk package
 from fenrir_api.api.fenrir_api import FenrirApi
